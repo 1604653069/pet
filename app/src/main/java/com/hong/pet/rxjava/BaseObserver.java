@@ -56,8 +56,8 @@ public abstract class BaseObserver<T> implements Observer<BaseRespon<T>> {
     @Override
     public void onError(Throwable e) {
         Log.i("TAG","onError");
+        progressDialog.dismiss();
         onFailure(e, RxExceptionUtil.exceptionHandler(e));
-        cancleRequest();
     }
 
     @Override
@@ -66,9 +66,12 @@ public abstract class BaseObserver<T> implements Observer<BaseRespon<T>> {
         cancleRequest();
     }
     public void hidDialog() {
-        if (progressDialog != null && showDialog == true)
+        if (progressDialog != null && showDialog == true){
             progressDialog.dismiss();
-        progressDialog = null;
+            progressDialog = null;
+        }
+
+
     }
     /**
      * 是否有网络连接，不管是wifi还是数据流量

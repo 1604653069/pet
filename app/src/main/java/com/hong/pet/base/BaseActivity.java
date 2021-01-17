@@ -24,13 +24,12 @@ public abstract class BaseActivity<P extends BasePresenter> extends AppCompatAct
 
     protected void init(){
         mPresenter = getPresenter();
-        mToast = new Toast(this);
+        mToast = Toast.makeText(this, "", Toast.LENGTH_SHORT);
     }
 
     protected void T(String message){
         if(mToast!=null){
             mToast.setText(message);
-            mToast.setDuration(Toast.LENGTH_SHORT);
             mToast.show();
         }
     }
