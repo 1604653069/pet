@@ -11,11 +11,11 @@ import androidx.fragment.app.Fragment;
 
 import com.hong.pet.R;
 
-public class FragmentIndex extends Fragment {
+public class FragmentService extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_index,container,false);
+        View view = inflater.inflate(R.layout.fragment_service,container,false);
         return view;
     }
 }

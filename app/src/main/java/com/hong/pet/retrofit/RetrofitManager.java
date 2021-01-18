@@ -23,7 +23,7 @@ public class RetrofitManager {
     public static final int DEFAULT_TIME=10;
     private RetrofitManager(){}
     private static OkHttpClient client;
-    private static String baseUrl = "http://10.0.2.2:8080";
+    private static String baseUrl = "http://192.168.1.43:8080";
     private static Retrofit retrofit;
     public static Retrofit getRetrofit(){
         if(retrofit==null)
