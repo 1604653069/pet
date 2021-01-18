@@ -24,7 +24,7 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
     @Override
     protected void dosomething() {
         makeStatusBarTransparent();
-        this.mPresenter.login(this,new QueryUser("admin","admin"));
+        this.mPresenter.login(this,new QueryUser("admin","admi1n"));
     }
     @Override
     public void loginSuccess(User user) {
@@ -36,5 +36,6 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
     @Override
     public void loginFail(String errorMsg) {
         T(errorMsg);
+        Log.i("TAG",errorMsg);
     }
 }
