@@ -1,5 +1,6 @@
-package com.hong.pet.ui;
+package com.hong.pet.ui.activity;
 
+import android.content.Intent;
 import android.util.Log;
 import com.hong.pet.R;
 import com.hong.pet.base.BaseActivity;
@@ -27,7 +28,9 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
     }
     @Override
     public void loginSuccess(User user) {
-        Log.i("TAG",user.toString());
+        Log.i("TAG","当前登录用户:"+user.toString());
+       startActivity(new Intent(this,MainActivity.class));
+       finish();
     }
 
     @Override

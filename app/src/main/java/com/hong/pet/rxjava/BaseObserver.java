@@ -58,6 +58,7 @@ public abstract class BaseObserver<T> implements Observer<BaseRespon<T>> {
         Log.i("TAG","onError");
         onFailure(e, RxExceptionUtil.exceptionHandler(e));
         cancleRequest();
+        progressDialog.dismiss();
     }
 
     @Override
@@ -90,7 +91,6 @@ public abstract class BaseObserver<T> implements Observer<BaseRespon<T>> {
     public void cancleRequest(){
         if (disposable!=null&&disposable.isDisposed()) {
             disposable.dispose();
-            hidDialog();
         }
     }
 

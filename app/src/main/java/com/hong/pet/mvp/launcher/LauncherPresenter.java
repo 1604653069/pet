@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Handler;
 
 import com.hong.pet.base.BasePresenter;
-import com.hong.pet.ui.LoginActivity;
+import com.hong.pet.ui.activity.LogOrReActivity;
 
 public class LauncherPresenter extends BasePresenter<LauncherView,LauncherModel> {
 
@@ -21,7 +21,7 @@ public class LauncherPresenter extends BasePresenter<LauncherView,LauncherModel>
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                mContext.startActivity(new Intent(mContext, LoginActivity.class));
+                mContext.startActivity(new Intent(mContext, LogOrReActivity.class));
             }
         },1500);
     }

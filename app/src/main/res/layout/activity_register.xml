@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+    android:background="#F4F4F4"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
-    <include
-        layout="@layout/title"/>
+    <include layout="@layout/title"/>
     <LinearLayout
         android:layout_marginTop="10dp"
         android:orientation="horizontal"
@@ -78,7 +77,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <EditText
-                android:id="@+id/login_edit_tel"
                 android:textSize="15sp"
                 android:hint="输入手机号码"
                 android:layout_marginLeft="12dp"
@@ -107,60 +105,28 @@
                 android:layout_width="21dp"
                 android:layout_height="21dp"/>
         </LinearLayout>
-        <EditText
-            android:id="@+id/login_edit_password"
-            android:textSize="15sp"
-            android:background="@null"
-            android:hint="输入登录密码"
-            android:layout_marginLeft="12dp"
-            android:layout_width="0dp"
-            android:layout_weight="1"
+       <EditText
+           android:textSize="15sp"
+           android:background="@null"
+           android:hint="设置登录密码"
+           android:layout_marginLeft="12dp"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_height="match_parent"/>
+        <ImageView
+            android:layout_marginRight="12dp"
+            android:src="@mipmap/login_mingw_icon"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"/>
     </LinearLayout>
-    <LinearLayout
-        android:layout_marginTop="12dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:gravity="center"
-            android:background="@drawable/log_or_re_login_btn"
-            android:layout_marginLeft="12dp"
-            android:textColor="@color/petColor"
-            android:text="忘记了？"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="45dp"/>
-        <TextView
-            android:textColor="#fff"
-            android:gravity="center"
-            android:background="@drawable/log_or_re_regiter_btn"
-            android:layout_marginRight="12dp"
-            android:layout_marginLeft="12dp"
-            android:text="登录"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="45dp"/>
-    </LinearLayout>
-    <LinearLayout
+    <TextView
         android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_marginTop="21dp"
+        android:textColor="#fff"
+        android:text="确定"
+        android:background="@drawable/regiter_btn_nor"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:src="@mipmap/login_qq_login_btn_icon"
-            android:layout_width="54dp"
-            android:layout_height="54dp"/>
-        <ImageView
-            android:layout_marginLeft="21dp"
-            android:src="@mipmap/login_weichat_login_btn_icon"
-            android:layout_width="54dp"
-            android:layout_height="54dp"/>
-        <ImageView
-            android:layout_marginLeft="21dp"
-            android:src="@mipmap/login_sina_login_btn_icon"
-            android:layout_width="54dp"
-            android:layout_height="54dp"/>
-    </LinearLayout>
+        android:layout_height="39dp"/>
 </LinearLayout>

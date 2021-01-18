@@ -11,6 +11,8 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import butterknife.ButterKnife;
+
 public abstract class BaseActivity<P extends BasePresenter> extends AppCompatActivity implements BaseView {
     protected P mPresenter;
     protected Toast mToast;
@@ -18,13 +20,14 @@ public abstract class BaseActivity<P extends BasePresenter> extends AppCompatAct
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
+        ButterKnife.bind(this);
         init();
         dosomething();
     }
 
     protected void init(){
         mPresenter = getPresenter();
-        mToast = new Toast(this);
+        mToast = Toast.makeText(this,"",Toast.LENGTH_SHORT);
     }
 
     protected void T(String message){

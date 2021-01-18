@@ -1,18 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainActivity">
+    android:orientation="vertical"
+    tools:context=".ui.activity.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <FrameLayout
+        android:id="@+id/main_fl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <View
+        android:background="#A2A2A2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <LinearLayout
+        android:layout_marginTop="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="42dp">
+        <RadioGroup
+            android:id="@+id/menus"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RadioButton
+                android:textSize="12sp"
+                android:id="@+id/menu_index"
+                android:textColor="@drawable/main_menu_index_tv"
+                android:text="社区"
+                android:button="@null"
+                android:drawableTop="@drawable/main_menu_index"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+            <RadioButton
+                android:textSize="12sp"
+                android:id="@+id/menu_news"
+                android:textColor="@drawable/main_menu_index_tv"
+                android:text="资讯"
+                android:button="@null"
+                android:drawableTop="@drawable/main_menu_news"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+            <RadioButton
+                android:textSize="12sp"
+                android:id="@+id/menu_shop"
+                android:textColor="@drawable/main_menu_index_tv"
+                android:text="商城"
+                android:button="@null"
+                android:drawableTop="@drawable/main_menu_shop"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+            <RadioButton
+                android:textSize="12sp"
+                android:id="@+id/menu_service"
+                android:textColor="@drawable/main_menu_index_tv"
+                android:text="服务"
+                android:button="@null"
+                android:drawableTop="@drawable/main_menu_service"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+            <RadioButton
+                android:textSize="12sp"
+                android:id="@+id/menu_mine"
+                android:textColor="@drawable/main_menu_index_tv"
+                android:text="我的"
+                android:button="@null"
+                android:drawableTop="@drawable/main_menu_mine"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+        </RadioGroup>
+    </LinearLayout>
+</LinearLayout>

@@ -1,12 +1,14 @@
-package com.hong.pet.ui;
+package com.hong.pet.ui.activity;
 
-import android.graphics.Color;
 
 import com.hong.pet.R;
 import com.hong.pet.base.BaseActivity;
 import com.hong.pet.mvp.launcher.LauncherPresenter;
 import com.hong.pet.mvp.launcher.LauncherView;
 
+/**
+ * 引导界面
+ */
 public class LauncherActivity extends BaseActivity<LauncherPresenter> implements LauncherView {
 
     @Override
