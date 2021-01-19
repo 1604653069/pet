@@ -10,12 +10,34 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.hong.pet.R;
+import com.hong.pet.base.BaseFragment;
+import com.hong.pet.mvp.main.service.ServicePresenter;
+import com.hong.pet.mvp.main.service.ServiceView;
 
-public class FragmentService extends Fragment {
-    @Nullable
+public class FragmentService extends BaseFragment<ServicePresenter> implements ServiceView {
+
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_service,container,false);
-        return view;
+    public int getLayoutId() {
+        return R.layout.fragment_service;
+    }
+
+    @Override
+    protected void dosomething() {
+
+    }
+
+    @Override
+    protected ServicePresenter getPresenter() {
+        return new ServicePresenter(getContext(),this);
+    }
+
+    @Override
+    public void showDialog() {
+
+    }
+
+    @Override
+    public void onFail(String message) {
+
     }
 }

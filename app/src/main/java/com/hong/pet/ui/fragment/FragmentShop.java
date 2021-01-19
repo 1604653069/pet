@@ -10,12 +10,34 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.hong.pet.R;
+import com.hong.pet.base.BaseFragment;
+import com.hong.pet.mvp.main.shop.ShopPresenter;
+import com.hong.pet.mvp.main.shop.ShopView;
 
-public class FragmentShop extends Fragment {
-    @Nullable
+public class FragmentShop extends BaseFragment<ShopPresenter> implements ShopView {
+
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_shop,container,false);
-        return view;
+    public int getLayoutId() {
+        return R.layout.fragment_shop;
+    }
+
+    @Override
+    protected void dosomething() {
+
+    }
+
+    @Override
+    protected ShopPresenter getPresenter() {
+        return new ShopPresenter(getContext(),this);
+    }
+
+    @Override
+    public void showDialog() {
+
+    }
+
+    @Override
+    public void onFail(String message) {
+
     }
 }

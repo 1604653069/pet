@@ -27,6 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <RadioButton
+                android:checked="true"
                 android:textSize="12sp"
                 android:id="@+id/menu_index"
                 android:textColor="@drawable/main_menu_index_tv"

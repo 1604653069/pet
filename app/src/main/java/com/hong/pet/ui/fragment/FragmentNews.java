@@ -10,12 +10,34 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.hong.pet.R;
+import com.hong.pet.base.BaseFragment;
+import com.hong.pet.mvp.main.news.NewsPresenter;
+import com.hong.pet.mvp.main.news.NewsView;
 
-public class FragmentNews extends Fragment {
-    @Nullable
+public class FragmentNews extends BaseFragment<NewsPresenter> implements NewsView {
+
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_news,container,false);
-        return view;
+    public int getLayoutId() {
+        return R.layout.fragment_news;
+    }
+
+    @Override
+    protected void dosomething() {
+
+    }
+
+    @Override
+    protected NewsPresenter getPresenter() {
+        return new NewsPresenter(getContext(),this);
+    }
+
+    @Override
+    public void showDialog() {
+
+    }
+
+    @Override
+    public void onFail(String message) {
+
     }
 }

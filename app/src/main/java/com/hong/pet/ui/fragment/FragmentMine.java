@@ -1,21 +1,34 @@
 package com.hong.pet.ui.fragment;
 
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-
 import com.hong.pet.R;
+import com.hong.pet.base.BaseFragment;
+import com.hong.pet.mvp.main.mine.MinePresenter;
+import com.hong.pet.mvp.main.mine.MineView;
 
-public class FragmentMine extends Fragment {
-    @Nullable
+public class FragmentMine extends BaseFragment<MinePresenter> implements MineView {
+
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_mine,container,false);
-        return view;
+    public int getLayoutId() {
+        return R.layout.fragment_mine;
+    }
+
+    @Override
+    protected void dosomething() {
+
+    }
+
+    @Override
+    protected MinePresenter getPresenter() {
+        return new MinePresenter(getContext(),this);
+    }
+
+    @Override
+    public void showDialog() {
+
+    }
+
+    @Override
+    public void onFail(String message) {
+
     }
 }
