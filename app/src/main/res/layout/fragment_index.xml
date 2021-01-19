@@ -1,13 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <TextView
-        android:id="@+id/index_tv"
+    <LinearLayout
+        android:background="@color/petColor"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+    <LinearLayout
         android:gravity="center"
-        android:text="主界面"
+        android:background="@color/petColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.tabs.TabLayout
+            android:background="@color/petColor"
+            android:id="@+id/index_tab_layout"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tabTextColor="@color/white"
+            app:tabSelectedTextColor="@color/white"
+            app:tabIndicatorColor="@color/white"
+            />
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/index_viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 </LinearLayout>
