@@ -1,21 +1,43 @@
 package com.hong.pet.ui.fragment;
 
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
+import android.widget.TextView;
 
 import com.hong.pet.R;
+import com.hong.pet.base.BaseFragment;
+import com.hong.pet.mvp.main.index.IndexPresenter;
+import com.hong.pet.mvp.main.index.IndexView;
 
-public class FragmentIndex extends Fragment {
-    @Nullable
+import butterknife.BindView;
+
+public class FragmentIndex extends BaseFragment<IndexPresenter> implements IndexView {
+
+
+    @BindView(R.id.index_tv)
+    TextView indexTv;
+
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_index,container,false);
-        return view;
+    public int getLayoutId() {
+        return R.layout.fragment_index;
+    }
+
+    @Override
+    protected void dosomething() {
+
+    }
+
+    @Override
+    protected IndexPresenter getPresenter() {
+        return new IndexPresenter(getContext(),this);
+    }
+
+    @Override
+    public void showDialog() {
+
+    }
+
+    @Override
+    public void onFail(String message) {
+
     }
 }
